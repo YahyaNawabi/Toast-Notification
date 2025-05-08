@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buttons button:nth-child(1) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.buttons button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+}
+
+.buttons button:nth-child(3) {
+    background-color: #ff9800;
+    color: white;
+}
+
+#toastBox {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+}
+
+.toast {
+    padding: 15px 20px;
+    min-width: 250px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    animation: slideIn 0.5s ease forwards, fadeOut 0.5s ease 3s forwards;
+}
+
+.toast .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.toast .progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #fff;
+    animation: progress 3s linear forwards;
+}
+
+.toast.success {
+    background-color: #4CAF50;
+}
+
+.toast.error {
+    background-color: #f44336;
+}
+
+.toast.invalid {
+    background-color: #ff9800;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}

@@ -11,7 +11,7 @@ This project is a simple implementation of toast notifications with a progress b
 ## How to Use
 
 ### 1. View the Live Demo
-You can see a live demo of this project here: [View Live Demo](#)
+You can see a live demo of this project here: [View Live Demo](https://yahyanawabi.github.io/Toast-Notification/)
 
 ### 2. Files Structure
 - **index.html**: The main HTML file where the toast notifications and buttons are defined.
